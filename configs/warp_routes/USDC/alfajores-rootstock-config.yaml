@@ -4,16 +4,16 @@ tokens:
     decimals: 6
     symbol: USDC
     name: USDC
-    addressOrDenom: "0x7cd705eFc0d8457428365C15e8e0A280A29Aa18D"
+    addressOrDenom: "0x2351e45AF67d7C2C728D633F4A336d83b503ABCB"
     collateralAddressOrDenom: "0x2F25deB3848C207fc8E0c34035B3Ba7fC157602B"
     connections:
-      - token: ethereum|rootstock|0x879eAFf8F7278CEe0b29Bd4f95062E0dD994eBB4
+      - token: ethereum|rootstock|0xE71c1C60E004bD8be8d8DAF312828d7F9366d761
   - chainName: rootstock
     standard: EvmHypCollateral
     decimals: 6
     symbol: USDC
     name: USDC
-    addressOrDenom: "0x879eAFf8F7278CEe0b29Bd4f95062E0dD994eBB4"
-    collateralAddressOrDenom: "0x803ba4269567629b88903f048352f1aca05fc2c6"
+    addressOrDenom: "0xE71c1C60E004bD8be8d8DAF312828d7F9366d761"
+    collateralAddressOrDenom: "0x81532a7ab169efb8c3a0b6a173c8c4613a336eea"
     connections:
-      - token: ethereum|alfajores|0x7cd705eFc0d8457428365C15e8e0A280A29Aa18D
+      - token: ethereum|alfajores|0x2351e45AF67d7C2C728D633F4A336d83b503ABCB

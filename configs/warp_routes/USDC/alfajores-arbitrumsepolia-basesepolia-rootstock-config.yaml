@@ -1,0 +1,45 @@
+tokens:
+  - chainName: alfajores
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USDC
+    addressOrDenom: "0xd56ceBC11bd91f5A3F5Ba24B056fF7019D2C0374"
+    collateralAddressOrDenom: "0x2F25deB3848C207fc8E0c34035B3Ba7fC157602B"
+    connections:
+      - token: ethereum|rootstock|0x4Dfe1aAf305Bfc857529d26053a9E18f87Bfc7d6
+      - token: ethereum|arbitrumsepolia|0x7af379C950bC6aA0C3Df5f9cD8592F9D6f636d45
+      - token: ethereum|basesepolia|0xdB976eCC0c95Ea84d7bB7249920Fcc73392783F5
+  - chainName: rootstock
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USDC
+    addressOrDenom: "0x4Dfe1aAf305Bfc857529d26053a9E18f87Bfc7d6"
+    collateralAddressOrDenom: "0x81532a7ab169efb8c3a0b6a173c8c4613a336eea"
+    connections:
+      - token: ethereum|alfajores|0xd56ceBC11bd91f5A3F5Ba24B056fF7019D2C0374
+      - token: ethereum|arbitrumsepolia|0x7af379C950bC6aA0C3Df5f9cD8592F9D6f636d45
+      - token: ethereum|basesepolia|0xdB976eCC0c95Ea84d7bB7249920Fcc73392783F5
+  - chainName: arbitrumsepolia
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USDC
+    addressOrDenom: "0x7af379C950bC6aA0C3Df5f9cD8592F9D6f636d45"
+    collateralAddressOrDenom: "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d"
+    connections:
+      - token: ethereum|alfajores|0xd56ceBC11bd91f5A3F5Ba24B056fF7019D2C0374
+      - token: ethereum|rootstock|0x4Dfe1aAf305Bfc857529d26053a9E18f87Bfc7d6
+      - token: ethereum|basesepolia|0xdB976eCC0c95Ea84d7bB7249920Fcc73392783F5
+  - chainName: basesepolia
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USDC
+    addressOrDenom: "0xdB976eCC0c95Ea84d7bB7249920Fcc73392783F5"
+    collateralAddressOrDenom: "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
+    connections:
+      - token: ethereum|alfajores|0xd56ceBC11bd91f5A3F5Ba24B056fF7019D2C0374
+      - token: ethereum|rootstock|0x4Dfe1aAf305Bfc857529d26053a9E18f87Bfc7d6
+      - token: ethereum|arbitrumsepolia|0x7af379C950bC6aA0C3Df5f9cD8592F9D6f636d45

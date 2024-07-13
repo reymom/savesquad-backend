@@ -1,0 +1,60 @@
+alfajores:
+  interchainSecurityModule:
+    modules:
+      - relayer: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: trustedRelayerIsm
+      - domains: {}
+        owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: defaultFallbackRoutingIsm
+    threshold: 1
+    type: staticAggregationIsm
+  isNft: false
+  mailbox: "0xb4333E46eC96eef4077d4D48D8360a06835c0056"
+  owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  token: "0x2F25deB3848C207fc8E0c34035B3Ba7fC157602B"
+  type: collateral
+rootstock:
+  interchainSecurityModule:
+    modules:
+      - relayer: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: trustedRelayerIsm
+      - domains: {}
+        owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: defaultFallbackRoutingIsm
+    threshold: 1
+    type: staticAggregationIsm
+  isNft: false
+  mailbox: "0xE53C3f53DC0CcbBE6A4a6C8B81EF1Ca05099B28C"
+  owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  token: "0x81532a7ab169efb8c3a0b6a173c8c4613a336eea"
+  type: collateral
+arbitrumsepolia:
+  interchainSecurityModule:
+    modules:
+      - relayer: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: trustedRelayerIsm
+      - domains: {}
+        owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: defaultFallbackRoutingIsm
+    threshold: 1
+    type: staticAggregationIsm
+  isNft: false
+  mailbox: "0x9a6a82b02975276Db6585395935A4862E5D22269"
+  owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  token: "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d"
+  type: collateral
+basesepolia:
+  interchainSecurityModule:
+    modules:
+      - relayer: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: trustedRelayerIsm
+      - domains: {}
+        owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+        type: defaultFallbackRoutingIsm
+    threshold: 1
+    type: staticAggregationIsm
+  isNft: false
+  mailbox: "0x2eDD62839fE6920b551520Cf4D9967a34FeE565a"
+  owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  token: "0x036CbD53842c5426634e7929541eC2318f3dCF7e"
+  type: collateral
