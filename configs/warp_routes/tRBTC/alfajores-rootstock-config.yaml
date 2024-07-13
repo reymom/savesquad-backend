@@ -1,0 +1,19 @@
+tokens:
+  - chainName: alfajores
+    standard: EvmHypCollateral
+    decimals: 18
+    symbol: WtRBTC
+    name: Wrapped tRBTC
+    addressOrDenom: "0xE48Dfca01559d2D7931B127D9d1aF2BC09d6FbA0"
+    collateralAddressOrDenom: "0xD81fec6c69A34888552D5ac68DE0f7a0273F327E"
+    connections:
+      - token: ethereum|rootstock|0x63fF65385B1490e43B3401537858a7Fcdd06F00e
+  - chainName: rootstock
+    standard: EvmHypCollateral
+    decimals: 18
+    symbol: WtRBTC
+    name: Wrapped tRBTC
+    addressOrDenom: "0x63fF65385B1490e43B3401537858a7Fcdd06F00e"
+    collateralAddressOrDenom: "0xbe326c23cf590db9287218bbdd23de5ba5864f2b"
+    connections:
+      - token: ethereum|alfajores|0xE48Dfca01559d2D7931B127D9d1aF2BC09d6FbA0

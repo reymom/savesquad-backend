@@ -1,0 +1,16 @@
+defaultHook:
+  beneficiary: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  maxProtocolFee: "10000000000000000"
+  owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  protocolFee: "2000000000000000"
+  type: protocolFee
+defaultIsm:
+  relayer: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  type: trustedRelayerIsm
+owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+requiredHook:
+  beneficiary: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  maxProtocolFee: "10000000000000000"
+  owner: "0x632b39E5Fe4EAAFDF21601b2Bc206ca0f602C85A"
+  protocolFee: "2000000000000000"
+  type: protocolFee

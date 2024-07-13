@@ -1,0 +1,19 @@
+tokens:
+  - chainName: alfajores
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USDC
+    addressOrDenom: "0x7cd705eFc0d8457428365C15e8e0A280A29Aa18D"
+    collateralAddressOrDenom: "0x2F25deB3848C207fc8E0c34035B3Ba7fC157602B"
+    connections:
+      - token: ethereum|rootstock|0x879eAFf8F7278CEe0b29Bd4f95062E0dD994eBB4
+  - chainName: rootstock
+    standard: EvmHypCollateral
+    decimals: 6
+    symbol: USDC
+    name: USDC
+    addressOrDenom: "0x879eAFf8F7278CEe0b29Bd4f95062E0dD994eBB4"
+    collateralAddressOrDenom: "0x803ba4269567629b88903f048352f1aca05fc2c6"
+    connections:
+      - token: ethereum|alfajores|0x7cd705eFc0d8457428365C15e8e0A280A29Aa18D
