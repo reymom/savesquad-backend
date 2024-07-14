@@ -2,8 +2,7 @@
 pragma solidity ^0.8.19;
 
 import {IERC20} from "./IERC20.sol";
-
-// TODO: adapt code for ERC20
+import {IStakingContract} from "./IStaking.sol";
 
 contract SaveSquad {
     struct Pool {
@@ -24,12 +23,8 @@ contract SaveSquad {
         uint256 lastTimeDeposited;
     }
 
-    uint256 public poolCount;
-
-    mapping(uint256 => Pool) public pools;
-
-    // number of pool -> mapping person to Deposit struct
-    mapping(uint256 => mapping(address => Deposit)) public deposits;
+    event Deposited(uint256 poolId, address depositor, uint256 amount);
+    event Withdrawn(uint256 poolId, address withdrawer, uint256 amount);
 
     event PoolCreated(
         uint256 poolId,
@@ -41,12 +36,22 @@ contract SaveSquad {
         address creator,
         address currency
     );
-    event Deposited(uint256 poolId, address depositor, uint256 amount);
-    event Withdrawn(uint256 poolId, address withdrawer, uint256 amount);
 
     modifier onlyMember(uint256 poolId) {
         require(isMember(poolId, msg.sender), "Not a member of this pool");
         _;
+    }
+
+    uint256 public poolCount;
+    IStakingContract public stakingContract;
+
+    mapping(uint256 => Pool) public pools;
+
+    // number of pool -> mapping person to Deposit struct
+    mapping(uint256 => mapping(address => Deposit)) public deposits;
+
+    constructor(address _stakingContract) {
+        stakingContract = IStakingContract(_stakingContract);
     }
 
     function createPool(
@@ -99,6 +104,7 @@ contract SaveSquad {
             block.timestamp < pool.dueDate,
             "Pool has reached its due date"
         );
+        require(ammount > 0, "You need to deposit an ammount bigger than 0");
 
         IERC20 tokenContract = pool.currency;
         tokenContract.approve(address(this), ammount);
@@ -108,6 +114,9 @@ contract SaveSquad {
         deposits[poolId][msg.sender].lastTimeDeposited = block.timestamp;
 
         pool.balance += ammount;
+
+        pool.currency.approve(address(stakingContract), ammount);
+        stakingContract.stake(ammount);
 
         emit Deposited(poolId, msg.sender, ammount);
     }
