@@ -155,6 +155,18 @@ contract SaveSquad {
         );
         require(pool.isActive, "Pool is not active");
 
+        uint256 rewards = stakingContract.earned(address(this));
+        if (rewards > 0) {
+            pool.stakeRewards = rewards;
+            stakingContract.getReward();
+
+            for (uint256 i = 0; i < pool.members.length; i++) {
+                deposits[poolId][pool.members[i]].ammount +=
+                    rewards /
+                    pool.members.length;
+            }
+        }
+
         uint256 memberBalance = deposits[poolId][msg.sender].ammount;
         require(memberBalance > 0, "No balance to withdraw");
 
